@@ -45,3 +45,17 @@ div{
     box-sizing: border-box;
     padding: 0 5px;
 }
+
+.actions buttons{
+    border: none;
+    font-size: 12px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.actions button:hover{
+    background-color: darkred;
+}
