@@ -20,4 +20,8 @@ export class ItemComponent implements OnInit{
     this.deleteItem.emit(item);
   }
 
+  onToggle(item: Item){//recibir elemento de tipo item
+    item.completed = !item.completed;//cambiar el dato
+  }
+
 }
