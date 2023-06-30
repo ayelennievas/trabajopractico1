@@ -10,7 +10,7 @@ export class ItemComponent implements OnInit{
 
   @Input() item: Item = new Item();
   @Output() deleteItem: EventEmitter<Item> = new EventEmitter();
-
+  @Output() toggleItem: EventEmitter<Item> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
@@ -22,6 +22,7 @@ export class ItemComponent implements OnInit{
 
   onToggle(item: Item){//recibir elemento de tipo item
     item.completed = !item.completed;//cambiar el dato
+    this.toggleItem.emit(item);
   }
 
 }
